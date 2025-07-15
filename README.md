@@ -53,38 +53,72 @@ Add the following to your `pom.xml`:
 This Java-based project uses Hibernate ORM with a clean layered architecture.
 
 ```plaintext
-OnlineShoppingCart/
+ShopCart1/
+│
+├── .gitignore
+├── .project                  # Eclipse project config
+├── .classpath                # Eclipse classpath config
+├── .settings/                # Eclipse settings folder
+│
+├── pom.xml                   # Maven build file (if using Maven)
+│
 ├── src/
-│   └── com/
-│       └── onlineshop/
-│           ├── App.java                 // Main class with main() method
-│           ├── model/
-│           │   └── Product.java         // Entity class mapped with Hibernate
-│           ├── dao/
-│           │   └── ProductDao.java      // Handles database operations
-│           └── util/
-│               └── HibernateUtil.java   // Provides SessionFactory setup
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── ShopCart1/
+│   │   │       └── ShopCart1/
+│   │   │           ├── App.java
+│   │   │           ├── HibernateUtil.java
+│   │   │           ├── Order.java
+│   │   │           ├── OrderDao.java
+│   │   │           ├── Product.java
+│   │   │           ├── ProductDao.java
+│   │   │           └── (other Java classes)
+│   │   └── resources/
+│   │       ├── hibernate.cfg.xml
+│   │       └── log4j.properties
+│   │
+│   └── test/
+│       └── java/
+│           └── ShopCart1/
+│               └── ShopCart1/
+│                   └── AppTest.java
 │
-├── resources/
-│   └── hibernate.cfg.xml               // Hibernate config file
-│   └── log4j.properties                // Logging config (optional)
+├── target/                  
 │
-├── pom.xml                             // Maven build configuration
-├── README.md                           // Project documentation
-└── .gitignore                          // Git ignore rules
-yaml
-Copy
-Edit
+├── src/site/site.xml         
+│
+└── README.md                 
 ```
 ---
 
 
-## 📊 Database Table Schema
-🔹 Table: products
-| Column | Type                 | Description               |
-|--------|----------------------|---------------------------|
-| id     | SERIAL PRIMARY KEY    | Auto-incremented ID        |
-| name   | VARCHAR(100) NOT NULL | Product name               |
-| price  | NUMERIC(10, 2) NOT NULL CHECK (price >= 0) | Product price |
+## Database Table Schema
+
+#Table: `product`  
+| Column    | Type               |
+|-----------|--------------------|
+| id        | int (Primary Key)  |
+| name      | varchar            |
+| price     | double             |
+| quantity  | int                |
+
 ---
 
+#Table: `orders`  
+| Column      | Type                   |
+|-------------|------------------------|
+| id          | int (Primary Key)      |
+| product_id  | int (FK)               |
+| quantity    | int                    |
+---
+##Output(screenshot)
+![App Screenshot](screenshots/14.png)
+
+----
+
+📞 Contact Details  
+────────────────────────────  
+- 👤 Name   : Bhumi Yuvraj Raut 
+- ✉ Email  : bhumiraut5555@gamil.com 
+- 🐙 GitHub : BhumiRaut
