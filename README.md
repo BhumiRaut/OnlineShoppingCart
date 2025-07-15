@@ -11,6 +11,7 @@ OnlineShoppingCart is a simple Java-based web application that allows users to b
 - 👁️ View Product List
 - 🛒 Add Products to Cart
 - ✏️ Update/Delete Items in Cart
+- 🧰 Buy Products Place orders by selecting product ID and quantity.
 - 🔚 Exit
 ---
  🛠️ Technologies Used
@@ -113,7 +114,8 @@ ShopCart1/
 | quantity    | int                    |
 ---
 ##Output(screenshot)
-![App Screenshot](screenshots/14.png)
+
+![Screenshot](images/14.png)
 
 ----
 
